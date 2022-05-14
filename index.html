@@ -7,19 +7,21 @@
     <title>Curso criação de página web</title>
 </head>
 <body>
+    <script type="text/javascript" src="script.js"></script>
+
    <h1>Teste</h1> 
 <h2>Teste</h2>
 <h3>Teste</h3>
 <h4>Teste</h4>
 <h5>Teste</h5>
 <h6>Teste</h6>
-<img src="C:\Users\Aluno\Pictures\capasenai.png" alt=""></img>
+
 <img src="https://image.cachorrogato.com.br/textimages/cachorrinho-ideal" width="20%" weigth="20%"></img>
-<hr align= "center" noshade color="red" size="5" width="100%"
+<hr align= "center" noshade color="red" size="5" width="100%">
 <div> "No mundo dos negócios todos são pagos com duas</br> moedas; Dinheiro e expêriencia. Agarre a expêriencia</br> primeiro, o dinheiro virá depois."-- Harold Geneen</br>
 </br> </br> </br>
-<div> "Há homens que lutam um dia e são bons.</br> Há outros que lutam muitos dias e são melhores.</br> Mas ha os que lutam toda a vida, e estes são</br> imprescindiveis."--  Bertold Brecht</br>
-</br> </br> </br>
+"Há homens que lutam um dia e são bons.</br> Há outros que lutam muitos dias e são melhores.</br> Mas ha os que lutam toda a vida, e estes são</br> imprescindiveis."--  Bertold Brecht</br>
+</br> </br> </br></div>
 <p> Este texto aparece antes da imagem, a qual vai ser alinhada à esquerda.</br>
 <img src="https://media.istockphoto.com/photos/red-tree-in-black-and-white-landscape-picture-id514411108?s=612x612" align="left" width="5%" weigth="10%"></img> Esta frase está na imagem</br> pelo que fica à sua direita</br>
 
@@ -38,19 +40,47 @@
 </ul>
 <ol type="A">
     <li>Escola da Luz</li>
- <ol tYPE="1"> 
-    <li>ANO</li>
-    <ol tYPE="i">
-    <li>Turma A</li>
-    <li>Turma B</li>
-    <ol type="2">
-    <li>ANO</li>
-    <ol type="i">
-    <li>Turma A</li>
-    <li>Turma B</li>
-    <ol type="B">
+    <ol tYPE="1"> 
+        <li>ANO</li>
+        <ol tYPE="i">
+            <li>Turma A</li>
+            <li>Turma B</li>
+        </ol>
+        <li>ANO</li>
+        <ol tYPE="i">
+            <li>Turma A</li>
+        <li>Turma B</li>
+        </ol>
+    </ol>
     <li>Escola da Paz</li>
+    <ol tYPE="1"> 
+        <li>ANO</li>
+        <ol tYPE="I">
+            <li>Turma C</li>
+            <li>Turma D</li>
+        </ol>
+        <li>ANO</li>
+        <ol tYPE="I">
+            <li>Turma E</li>
+            <li>Turma F</li>
+        </ol>
+    </ol>
+</ol>
 
-</ol> 
+<button onclick="cliqueBotao()">Clique em mim</button>
+</br>
+<button onclick="contarClique()">Contar Cliques</button>
+<button>Reseta cliques</button>
+<p id="resultado"></p>
+</br>
+<button onclick="mediaDoAluno()">media Do Aluno</button>
+<p id="resultado"></p>
+</br>
+<button onclick="prompit()">Clique</button>
+</br>
+<button onclick="prompit()">Clique aqui</button>
+<p id="resultado"></p>
+    
+
 </body>
 </html>
