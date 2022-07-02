@@ -1,9 +1,9 @@
 const board = document.querySelector("[data-board]");
 const cellElements = document.querySelectorAll("[data-cell]");
-const winningMessage = document.querySelector("[data-winning-message]");
 const winningMessageTextElement = document.querySelector(
   "[data-winning-message-text]"
 );
+const winningMessage = document.querySelector("[data-winning-message]");
 const restartButton = document.querySelector("[data-restart-button]");
 let isCircleTurn;
 const winningCombinations = [
@@ -18,12 +18,12 @@ const winningCombinations = [
 ];
 
 const startGame = () => {
-  isCirleTurn = false;
+  isCircleTurn = false;
   for (const cell of cellElements) {
     cell.classList.remove("circle");
     cell.classList.remove("x");
     cell.removeEventListener("click", handleClick);
-    cell.addEventListener("cliclk", handleClick, { once: true });
+    cell.addEventListener("click", handleClick, { once: true });
   }
   setBoardHoverClass();
   winningMessage.classList.remove("show-winning-message");
@@ -32,7 +32,7 @@ const endGame = (isDraw) => {
   if (isDraw) {
     winningMessageTextElement.innerText = "Empate!";
   } else {
-    winningMessageTextElement.innerHTML = isCircleTurn
+    winningMessageTextElement.innerText = isCircleTurn
       ? "O Venceu!"
       : "X Venceu!";
   }
@@ -52,7 +52,7 @@ const checkForDraw = () => {
   });
 };
 const placeMark = (cell, classToAdd) => {
-  cell.classList.add(ClassToAdd);
+  cell.classList.add(classToAdd);
 };
 const setBoardHoverClass = () => {
   board.classList.remove("circle");
@@ -68,20 +68,20 @@ const swapTurns = () => {
   setBoardHoverClass();
 };
 const handleClick = (e) => {
-  //Colocar a marca (x ou Círculo)
+  // Colocar a marca (X ou Círculo)
   const cell = e.target;
   const classToAdd = isCircleTurn ? "circle" : "x";
   placeMark(cell, classToAdd);
-  //Veerificar por vitória
+  // Verificar por vitória
   const isWin = checkForWin(classToAdd);
-  //Verificar por empate
+  // Verificar por empate
   const isDraw = checkForDraw();
   if (isWin) {
     endGame(false);
   } else if (isDraw) {
     endGame(true);
   } else {
-    //Mudar Síbolo
+    // Mudar símbolo
     swapTurns();
   }
 };
